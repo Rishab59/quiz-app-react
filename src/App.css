@@ -1,0 +1,213 @@
+*{
+  background: url("./assets/herobg.png") ;
+  color: #fff ;
+}
+
+.App{
+  font-family: 'Consolas', Arial, Helvetica, sans-serif ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  flex-direction: column ;
+}
+
+.App h1{
+  background: none ;
+}
+
+.Menu, .EndScreen{
+  background: transparent ;
+  backdrop-filter: blur(5px) ;
+  border: 1px solid gold ;
+  width: 90% ;
+  height: 600px ;
+  border-radius: 24px ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  flex-direction: column ;
+}
+
+.start-btn, .EndScreen button{
+  width: 300px ;
+  height: 70px ;
+  margin: 5px ;
+  border: 3px solid gold ;
+  background: transparent ;
+  border-radius: 15px ;
+  font-size: 20px ;
+  cursor: pointer ;
+  background-color: gold ;
+  padding: 5px ;
+  color: black ;
+}
+
+.start-btn:hover, .EndScreen button:hover{
+  background-color: gray ;
+}
+
+.Quiz {
+  background: transparent ;
+  backdrop-filter: blur(5px) ;
+  border: 1px solid gold ;
+  width: 90% ;
+  max-width: 1500px ;
+  height: 600px ;
+  border-radius: 24px ;
+  display: grid ;
+  grid-template-rows: auto ;
+  grid-template-columns: 70% 30% ;
+  position: relative ;
+}
+
+.quiz-question {
+  margin: 2rem 2rem -2rem 2rem ;
+  max-height: 70% ;
+  background: transparent ;
+}
+
+.quiz-question pre {
+  width: 90% ;
+  height: auto ;
+  display: flex ;
+  align-items: center ;
+  padding: 1.5rem ;
+  font-size: 0.8rem ;
+  color: white ;
+  background: transparent ;
+  border-radius: 14px ;
+  overflow-y: auto ;
+  overflow-x: auto ;
+  max-height: 400px ;
+  overflow-wrap: break-word ;
+}
+
+.quiz-question pre::-webkit-scrollbar {
+  width: 6px ;
+  height: 6px ;
+}
+
+.quiz-question pre::-webkit-scrollbar-thumb {
+  background-color: gold ;
+  border-radius: 6px ;
+}
+
+.quiz-question pre::-webkit-scrollbar-track {
+  background-color: #f5f5f5 ;
+  border-radius: 6px ;
+}
+
+.Quiz .option-ele {
+  width: 90% ;
+  height: 70px ;
+  margin: 5px ;
+  border: 2px solid gold ;
+  border-radius: 15px ;
+  font-size: 20px ;
+  cursor: pointer ;
+  background: transparent ;
+  padding: 5px ;
+  color: black ;
+  overflow: auto ;
+  max-height: 70px ;
+  margin-right: 4rem ;
+}
+
+.options {
+  width: 100% ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  flex-direction: column ;
+  background: transparent ;
+  margin-top: -6rem ;
+}
+
+.btn-div {
+  margin: 0 ;
+  display: flex ;
+  flex-direction: row ;
+  width: 100% ;
+  background: transparent ;
+  align-self: flex-end ;
+  justify-content: space-between ;
+  position: fixed ;
+  bottom: 0 ;
+}
+
+.pre-btn, .nxt-btn, .submit-btn {
+  width: 150px ;
+  height: 50px ;
+  margin: 1rem 2rem ;
+  border: 3px solid gold ;
+  background: transparent ;
+  border-radius: 15px ;
+  font-size: 16px ;
+  cursor: pointer ;
+  background-color: gold ;
+  padding: 5px ;
+  color: black ;
+}
+
+.nxt-btn, .submit-btn{
+  right: 0 ;
+  bottom: 0 ;
+  position: fixed ;
+}
+
+.EndScreen p, .EndScreen p{
+  background: transparent ;
+  font-size: 2rem ;
+}
+
+
+@media (max-width: 650px) {
+  .Quiz {
+    max-width: 450px ;
+    display: flex ;
+    flex-direction: column ;
+  }
+
+  .quiz-question {
+    margin-left: 1rem ;
+    margin-top: -1rem ;
+  }
+
+  .Quiz h1 {
+    max-height: none ;
+    font-size: 0.8rem ;
+    margin-left: -1rem ;
+  }
+
+  .options {
+    width: 90% ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    margin-top: 2rem ;
+  }
+
+  .option-ele {
+    width: 5rem ;
+    margin: 5.5rem ;
+    padding: 0 ;
+  }
+
+  .btn-div {
+    width: 90% ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    margin-top: 2rem ;
+  }
+
+  .btn {
+    max-width: 7rem ;
+    margin: 1.5rem ;
+  }
+
+  .pre-btn{
+    left: 0 ;
+  }
+}
